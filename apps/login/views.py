@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView
@@ -8,6 +9,7 @@ from django.views.generic import FormView, RedirectView
 
 import config.settings as setting
 
+@csrf_protect
 class LoginFormView(LoginView):
     template_name='login.html'
 
