@@ -1,0 +1,48 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'js/Deportistas/list.js' %}"></script>
+{% endblock %}
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%;">Nro.</th>
+        <th scope="col" style="width: 10%;">Cédula</th>
+        <th scope="col" style="width: 15%;">Nombre</th>
+        <th scope="col" style="width: 15%;">Apellidos</th>
+        <th scope="col" style="width: 10%;">Fecha de Nacimiento</th>
+        <th scope="col" style="width: 5%;">Edad</th>
+        <th scope="col" style="width: 10%;">Género</th>
+        <th scope="col" style="width: 10%;">Altura</th>
+        <th scope="col" style="width: 10%;">Peso</th>
+        <th scope="col" style="width: 10%;">Estamento</th>
+        <th scope="col" style="width: 10%;">Seleccionado Deportivo</th>
+        <th scope="col" style="width: 10%;">Promedio Total Acumulado</th>
+        <th scope="col" style="width: 5%;">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    {% for deportista in object_list %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ deportista.cedula }}</td>
+        <td>{{ deportista.nombre }}</td>
+        <td>{{ deportista.apellidos }}</td>
+        <td>{{ deportista.fecha_nacimiento }}</td>
+        <td>{{ deportista.edad }}</td>
+        <td>{{ deportista.genero }}</td>
+        <td>{{ deportista.altura }}</td>
+        <td>{{ deportista.peso }}</td>
+        <td>{{ deportista.Estamento }}</td>
+        <td>{{ deportista.SeleccionadoDeportivo }}</td>
+        <td>{{ deportista.promedio_total_acomulado }}</td>
+        <td>
+            <!-- Aquí colocas tus opciones de edición, eliminación, etc. -->
+        </td>
+    </tr>
+    {% endfor %}
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

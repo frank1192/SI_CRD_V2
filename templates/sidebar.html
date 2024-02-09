@@ -95,15 +95,42 @@
                             Prestamos
                         </p>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa-solid fa-file-circle-exclamation"></i>
-                        <p>
-                            DEPORTE REPRESENTATIVO
-                        </p>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa-solid fa-book-bookmark"></i>
+                            <p>
+                                DEPORTE REPRESENTATIVO
+                                <i class="nav-icon right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{% url 'core:Deportistas_list' %}" class="nav-link">
+                                    <i class="nav-icon fa-solid fa-book-open-reader"></i>
+                                    <p>
+                                        DEPORTISTAS
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa-solid fa-globe"></i>
+                                    <p>
+                                        GESTION
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fa-solid fa-download"></i>
+                                    <p>
+                                        INTERNO
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa-solid fa-book-bookmark"></i>
