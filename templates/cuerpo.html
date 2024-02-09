@@ -1,0 +1,28 @@
+{% extends 'Registro.html' %}
+{% block body %}
+    {% block head_form %}
+
+    {% endblock %}
+
+    {% block content %}
+    
+    {% endblock  %}
+    <!-- Block javascript -->
+    {% block javascript %}
+
+    {% endblock %}
+    <script>
+        {% if messages %}
+            var html = '<p>';
+            {% for message in messages %}
+                html += '{{ message }}<br>';
+            {% endfor %}
+            html += '</p>';
+            Swal.fire({
+                title: 'Error!',
+                html: html,
+                icon: 'error'
+            });
+        {% endif %}
+    </script>
+{% endblock %}
