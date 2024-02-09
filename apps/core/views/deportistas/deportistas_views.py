@@ -12,7 +12,7 @@ import json
 
 class DeportistasListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
     model = Deportistas
-    template_name = 'deportistas/list.html'
+    template_name = 'Deportistas/list.html'
     permission_required = 'app.view_deportistas'
 
     @method_decorator(csrf_exempt)
