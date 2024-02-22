@@ -111,15 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'TIMEOUT': 300,  # Tiempo de vida de la caché en segundos (en este caso, 5 minutos)
-        'OPTIONS': {
-            'MAX_ENTRIES': 1000
-        }
-    }
-}
+
 
 
 # Internationalization
@@ -166,3 +158,5 @@ LOGOUT_REDIRECT_URL = '/login/'
 
 LOGIN_URL = '/login/'
 AUTH_USER_MODEL = 'user.User'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
